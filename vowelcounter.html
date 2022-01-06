@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vowel Counter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/index.html">To-Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/expensetracker.html">Expense Tracker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active " href="#">Vowel Counter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/calculator.html">Calculator</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+        <header>
+            <h1 class="text-center">Vowel Counter</h1>
+        </header>
+        <div class="container">
+            <form>
+                <div class="row form-group">           
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Type a sentence" id="vowelInput" name="taskInput"> 
+                    </div>
+                </div> 
+                <div class="row text-center">
+                    <div class="col">
+                        <button class="btn btn-success" id="countVowels" type="button">Count Vowels</button>
+                    </div>
+                </div>                   
+            </form>
+        </div>
+        <script src="js/vowelcounter.js"></script>
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    </body>
+</html>

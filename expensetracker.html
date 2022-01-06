@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Expense Tracker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/index.html">To-Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Expense Tracker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/vowelcounter.html">Vowel Counter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/calculator.html">Calculator</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+        <header>
+            <h1 class="text-center">Expense Tracker</h1>
+        </header>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h2 class="text-success">Add A New Expense:</h2>
+                </div>
+            </div>
+            <form>
+                <div class="row form-group">       
+                    <label class="col-form-label font-weight-bold col" for="name">Name:</label>
+                    <div class="col-md-10">             
+                        <input type="text" class="form-control" placeholder="" id="name" name="name"> 
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-form-label font-weight-bold col" for="date">Date:</label>
+                    <div class="col-md-10">             
+                        <input type="date" class="form-control" placeholder="" id="date" name="date"> 
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-form-label font-weight-bold col" for="amount">Amount:</label>
+                    <div class="col-md-10">             
+                        <input type="number" class="form-control" placeholder="" id="amount" name="amount" min="0"> 
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col">
+                        <button class="btn btn-success" id="addExpense" type="button">Add Expense</button>
+                    </div>
+                </div>                   
+            </form>
+            <div class="row mt-3">
+                <div class="col">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Delete?</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expenseList">
+                            <tr>
+                                <th colspan="4" class="text-center" id="defaultExpense">Add an expense to the list!</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="js/expensetracker.js"></script>
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    </body>
+</html>

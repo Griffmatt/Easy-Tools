@@ -1,0 +1,39 @@
+.btn-calc {
+    width: 3rem;
+    margin: .1rem;
+}
+.btn-equals{
+    background-color: #db8008e5;
+    color: white;
+    width: 6.4rem;
+}
+.btn-clear {
+    width: 9.8rem;
+    color: white;
+}
+.btn-equals:hover {
+    color: white;
+    background: #b45c0ae5;
+}
+
+#inputField{
+    background: black;
+    color: white;
+}
+
+.calculator-screen {
+    width: auto;
+    font-size: 5rem;
+    height: 80px;
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+    margin: 10px;
+  }
+  .card{
+      background: #acacac;
+      padding:.5rem;
+  }

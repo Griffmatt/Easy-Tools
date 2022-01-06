@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-Do List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link active" href="#" >To-Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/expensetracker.html">Expense Tracker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/vowelcounter.html">Vowel Counter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/calculator.html">Calculator</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+        <header>
+            <h1 class="text-center">To-Do List</h1>
+        </header>
+        <div class="container">
+            <form>
+                <div class="row form-group">           
+                    <label class="col-form-label col-2 offset-3 text-right" for="taskInput">Enter Task:</label>
+                    <div class="col-4">
+                        <input type="text" class="form-control" placeholder="Enter a task that needs to be done" id="taskInput" name="taskInput"> 
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-secondary" id="submitBtn" type="button">Submit</button>
+                    </div>
+                </div>                   
+            </form>
+            <div class="row">
+                <div class="col-6 offset-5">
+                    <ol id="taskList">
+                        
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <script src="js/todolist.js"></script>
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    </body>
+</html>

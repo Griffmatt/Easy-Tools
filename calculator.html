@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Easy Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="css/calc.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/index.html">To-Do</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/expensetracker.html">Expense Tracker</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/vowelcounter.html">Vowel Counter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#" >Calculator</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    <header>
+        <h1 class="text-center">Easy Tools</h1>
+    </header>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Calculator</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card w-sm-75">
+                            <input type="text" id="inputField" class="calculator-screen" value="" disabled>                   
+                        <div class="row btn-group">
+                            <div class="col text-center">
+                                <button class="btn btn-clear btn-primary btn-calc" value="clear">Clear</button>
+                                <button class="btn btn-secondary btn-calc" value="+">+</button>                                
+                            </div>
+                        </div>
+                        <div class="row btn-group">
+                            <div class="col text-center">
+                                <button class="btn btn-dark btn-calc" value="1">1</button>                               
+                                <button class="btn btn-dark btn-calc" value="2">2</button>                               
+                                <button class="btn btn-dark btn-calc" value="3">3</button>                              
+                                <button class="btn btn-secondary btn-calc" value="-">-</button>
+                            </div>
+                        </div>
+                        <div class="row btn-group">
+                            <div class="col text-center">
+                                <button class="btn btn-dark btn-calc" value="4" class="calculator-keys">4</button>                               
+                                <button class="btn btn-dark btn-calc" value="5" class="calculator-keys">5</button>                               
+                                <button class="btn btn-dark btn-calc" value="6">6</button>                              
+                                <button class="btn btn-secondary btn-calc" value="*">*</button>
+                            </div>
+                        </div>
+                        <div class="row btn-group">
+                            <div class="col text-center">
+                                <button class="btn btn-dark btn-calc" value="7">7</button>                               
+                                <button class="btn btn-dark btn-calc" value="8">8</button>                               
+                                <button class="btn btn-dark btn-calc" value="9">9</button>                              
+                                <button class="btn btn-secondary btn-calc" value="/">/</button>
+                            </div>
+                        </div>
+                        <div class="row btn-group align-items-center">
+                            <div class="col text-center">
+                                <button class="btn btn-dark btn-calc" value="0">0</button>                               
+                                <button class="btn btn-secondary btn-calc" value=".">.</button>                                                          
+                                <button class="btn btn-equals btn-calc" value="=">=</button>                          
+                            </div>
+                        </div>                                         
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="container">
+            <div class="row">
+                <div class="col">
+                <h2>Random Number</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card">
+                        <form>
+                            <div class="form-group">
+                                <label for="minNum">Min:</label>
+                                <input type="number" id="minNum">
+                            </div>
+                            <div class="form-group">
+                                <label for="maxNum">Max:</label>
+                                <input type="number" id="maxNum">
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col text-center">
+                                    <h2 id="randResult"></h2>
+                                </div>
+                                <div class="col text-right">
+                                    <button class="btn btn-dark" id="randNumBtn" type="button">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+               <h2>Timer</h2>
+            </div>
+        </div>
+    </div>
+    <footer>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/calc.js"></script>
+    <script src="js/randnum.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.6.1",
+    "bootstrap-social": "^5.1.1",
+    "copyfiles": "^2.2.0",
+    "font-awesome": "^4.7.0",
+    "imagemin-cli": "^5.1.0",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.0",
+    "parallelshell": "^3.0.1",
+    "popper.js": "^1.16.1",
+    "usemin-cli": "^0.6.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "author": "",
+  "license": "ISC"
+}
