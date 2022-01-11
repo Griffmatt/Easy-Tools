@@ -8,9 +8,15 @@
     width: 6.4rem;
 }
 .btn-clear {
-    width: 9.8rem;
+    width: 5rem;
     color: white;
 }
+
+.btn-del {
+    width: 4.6rem;
+    color: white;
+}
+
 .btn-equals:hover {
     color: white;
     background: #b45c0ae5;
@@ -22,6 +28,7 @@
 }
 
 .calculator-screen {
+    display: grid;
     width: auto;
     font-size: 5rem;
     height: 80px;
@@ -32,8 +39,20 @@
     padding-right: 20px;
     padding-left: 10px;
     margin: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .card{
       background: #acacac;
       padding:.5rem;
+  }
+
+  .calculator-screen .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1rem;
+  }
+  
+  .calculator-screen .current-operand {
+    color: white;
+    font-size: 2rem;
   }

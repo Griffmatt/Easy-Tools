@@ -41,42 +41,48 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-4">
                     <div class="card w-sm-75">
-                            <input type="text" id="inputField" class="calculator-screen" value="" disabled>                   
+                        <div class="calculator-screen">
+                            <div value="" data-previous-operand class="previous-operand"> 
+                            </div> 
+                            <div  value="" data-current-operand class="current-operand"> 
+                            </div>       
+                        </div>           
                         <div class="row btn-group">
                             <div class="col text-center">
-                                <button class="btn btn-clear btn-primary btn-calc" value="clear">Clear</button>
-                                <button class="btn btn-secondary btn-calc" value="+">+</button>                                
+                                <button class="btn btn-clear btn-primary" value="clear" data-all-clear>Clear</button>
+                                <button class="btn btn-del btn-danger" value="delete" data-delete>Del</button> 
+                                <button class="btn btn-secondary btn-calc" value="+" data-operation>+</button>                                
                             </div>
                         </div>
                         <div class="row btn-group">
                             <div class="col text-center">
-                                <button class="btn btn-dark btn-calc" value="1">1</button>                               
-                                <button class="btn btn-dark btn-calc" value="2">2</button>                               
-                                <button class="btn btn-dark btn-calc" value="3">3</button>                              
-                                <button class="btn btn-secondary btn-calc" value="-">-</button>
+                                <button class="btn btn-dark btn-calc" value="1" data-number>1</button>                               
+                                <button class="btn btn-dark btn-calc" value="2" data-number>2</button>                               
+                                <button class="btn btn-dark btn-calc" value="3" data-number>3</button>                              
+                                <button class="btn btn-secondary btn-calc" value="-" data-operation>-</button>
                             </div>
                         </div>
                         <div class="row btn-group">
                             <div class="col text-center">
-                                <button class="btn btn-dark btn-calc" value="4" class="calculator-keys">4</button>                               
-                                <button class="btn btn-dark btn-calc" value="5" class="calculator-keys">5</button>                               
-                                <button class="btn btn-dark btn-calc" value="6">6</button>                              
-                                <button class="btn btn-secondary btn-calc" value="*">*</button>
+                                <button class="btn btn-dark btn-calc" value="4" class="calculator-keys" data-number>4</button>                               
+                                <button class="btn btn-dark btn-calc" value="5" class="calculator-keys" data-number>5</button>                               
+                                <button class="btn btn-dark btn-calc" value="6" data-number>6</button>                              
+                                <button class="btn btn-secondary btn-calc" value="*" data-operation>*</button>
                             </div>
                         </div>
                         <div class="row btn-group">
                             <div class="col text-center">
-                                <button class="btn btn-dark btn-calc" value="7">7</button>                               
-                                <button class="btn btn-dark btn-calc" value="8">8</button>                               
-                                <button class="btn btn-dark btn-calc" value="9">9</button>                              
-                                <button class="btn btn-secondary btn-calc" value="/">/</button>
+                                <button class="btn btn-dark btn-calc" value="7" data-number>7</button>                               
+                                <button class="btn btn-dark btn-calc" value="8" data-number>8</button>                               
+                                <button class="btn btn-dark btn-calc" value="9" data-number>9</button>                              
+                                <button class="btn btn-secondary btn-calc" value="/" data-operation>/</button>
                             </div>
                         </div>
                         <div class="row btn-group align-items-center">
                             <div class="col text-center">
-                                <button class="btn btn-dark btn-calc" value="0">0</button>                               
-                                <button class="btn btn-secondary btn-calc" value=".">.</button>                                                          
-                                <button class="btn btn-equals btn-calc" value="=">=</button>                          
+                                <button class="btn btn-dark btn-calc" value="0" data-number>0</button>                               
+                                <button class="btn btn-secondary btn-calc" value="." data-number>.</button>                                                          
+                                <button class="btn btn-equals btn-calc" value="=" data-equals>=</button>                          
                             </div>
                         </div>                                         
                     </div>
@@ -114,14 +120,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-               <h2>Timer</h2>
-            </div>
-        </div>
     </div>
-    <footer>
-    </footer>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
