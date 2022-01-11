@@ -54,9 +54,8 @@ class Calculator {
     }
     this.currentOperand = ''
     this.operation = undefined
-    this.answer = 1
     this.previousOperand = computation
-    this.currentAnswer = computation
+    
   }
 
   getDisplayNumber(number) {
@@ -82,13 +81,13 @@ class Calculator {
     if (this.operation != null) {
       this.previousOperandTextElement.innerText =
         `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
-    } else if(this.answer===1){
-        this.previousOperandTextElement.innerText = this.getDisplayNumber(this.previousOperand)
-    }
+    } 
     else {
-      this.previousOperandTextElement.innerText = ''
+      this.previousOperandTextElement.innerText = this.getDisplayNumber(this.previousOperand)
     }
+    
   }
+
 }
 
 
