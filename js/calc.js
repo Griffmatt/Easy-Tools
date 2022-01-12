@@ -16,8 +16,13 @@ class Calculator {
   }
 
   appendNumber(number) {
+    if(this.solved){
+      this.currentOperand=''
+      this.solved=false
+    }
     if (number === '.' && this.currentOperand.includes('.')) return
     this.currentOperand = this.currentOperand.toString() + number.toString()
+    this.solved=false
   }
 
   chooseOperation(operation) {
@@ -52,10 +57,9 @@ class Calculator {
       default:
         return
     }
-    this.currentOperand = ''
+    this.currentOperand = computation
     this.operation = undefined
-    this.previousOperand = computation
-    
+    this.previousOperand = ''
   }
 
   getDisplayNumber(number) {
@@ -83,11 +87,37 @@ class Calculator {
         `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
     } 
     else {
-      this.previousOperandTextElement.innerText = this.getDisplayNumber(this.previousOperand)
+      this.previousOperandTextElement.innerText = ''
     }
     
   }
 
+  solve() {
+    let computation
+    const prev = parseFloat(this.previousOperand)
+    const current = parseFloat(this.currentOperand)
+    if (isNaN(prev) || isNaN(current)) return
+    switch (this.operation) {
+      case '+':
+        computation = prev + current
+        break
+      case '-':
+        computation = prev - current
+        break
+      case '*':
+        computation = prev * current
+        break
+      case '/':
+        computation = prev / current
+        break
+      default:
+        return
+    }
+    this.currentOperand = computation
+    this.operation = undefined
+    this.previousOperand = ''
+    this.solved = true
+  }
 }
 
 
@@ -102,6 +132,7 @@ const currentOperandTextElement = document.querySelector('[data-current-operand]
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 numberButtons.forEach(button => {
+
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText)
     calculator.updateDisplay()
@@ -116,7 +147,7 @@ operationButtons.forEach(button => {
 })
 
 equalsButton.addEventListener('click', button => {
-  calculator.compute()
+  calculator.solve()
   calculator.updateDisplay()
 })
 
